@@ -86,7 +86,7 @@ app.get('/order/:id', (request, response) => {
 		return response.status(404).json({ error: 'Pedido não encontrado.' });
 	}
 
-	response.json(orders);
+	response.json(orders[orderIndex]);
 });
 
 app.patch('/order/:id', (request, response) => {
